@@ -8,6 +8,9 @@ import EmployeeList from './components/EmployeeList'
 
 function App() {
 
+  //Exempel på två states
+  // name (med default-värdet Markus)
+  // showList (med default-värdet true)
   let [name, setName] = useState("Markus");
   let [showList, setShowList] = useState(true);
   
@@ -19,10 +22,12 @@ function App() {
 
   let handleChange = () => {
     let newName = document.querySelector("#nameInput").value;
+    //Funktion för att ändra på name-state till nytt namn från input
     setName(newName);
   }
 
   let toggleList = () => {
+    //Ändrar på showList mellan true/false
     setShowList(!showList);
   }
 
