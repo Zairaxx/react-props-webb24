@@ -1,11 +1,11 @@
 import Employee from "./Employee";
 
-let EmployeeList = (props) => {
+let EmployeeList = ({data}) => {
 
     return <div>
         <h2>Employee List</h2>
         <ul>
-            {props.data.map((emp,i) => <Employee employee={emp}/> )}
+            {data.map((emp,i) => <Employee key={i} employee={emp}/> )}
         </ul>
     </div>
 }
